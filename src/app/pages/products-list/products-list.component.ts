@@ -23,7 +23,7 @@ export type Product = {
 })
 export class ProductsListComponent {
   async ngOnInit(){
-    const res = await fetch('https://fakestoreapi.com/products/');
+    const res = await fetch('https://fakestoreapi.com/products/category/electronics');
     const data = await res.json();
     this products.set(data);
   }
