@@ -22,6 +22,10 @@ export type Product = {
   styles: ``,
 })
 export class ProductsListComponent {
+  const res = await fetch('https://fakestoreapi.com/products/');
+  const data = await res.json();
+  this products.set(data);
+  
   products = signal<Product[]>([
     {
       id: 1,
